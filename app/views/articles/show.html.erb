@@ -7,6 +7,16 @@
       <p>2020/4/16</p>
     </div>
   </div>
+
+  <div class="article_detail_actions">
+    <div class="dropdown">
+      <%= image_tag 'actions.svg', class: 'dropbtn' %>
+      <div class="dropdown-content mini">
+        <%= link_to "編集する", edit_article_path(id: @article.id) %>
+      </div>      
+    </div>
+  </div>
+
   <div class="article_content">
     <%= @article.content %>
   </div>
