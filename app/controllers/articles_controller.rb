@@ -27,9 +27,9 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      redirect_to article_path(id: @article.id), notice: "更新できました"
+      redirect_to article_path(id: @article.id), notice: '更新できました'
     else
-      flash.now[:error] = "更新できませんでした"
+      flash.now[:error] = '更新できませんでした'
       render :edit, status: :unprocessable_entity
     end
   end
@@ -37,7 +37,7 @@ class ArticlesController < ApplicationController
   def destroy
     article = Article.find(params[:id])
     article.destroy!
-    redirect_to root_path, status: :see_other, notice: "削除に成功しました"
+    redirect_to root_path, status: :see_other, notice: '削除に成功しました'
   end
 
   private
