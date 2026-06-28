@@ -26,3 +26,9 @@ module Blogapp
     config.i18n.default_locale = :ja
   end
 end
+
+module FileTest
+  def self.exists?(path)
+    exist?(path)
+  end
+end

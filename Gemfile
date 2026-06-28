@@ -19,6 +19,10 @@ gem "jbuilder"
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"
 
+gem "sassc-rails"
+gem "faker"
+gem "hamlit"
+
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
@@ -43,11 +47,14 @@ group :development, :test do
 
   # Omakase Ruby styling [https://github.com/rails/rubocop-rails-omakase/]
   gem "rubocop-rails-omakase", require: false
+
+  gem "pry-byebug"
 end
 
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+  gem "erb2haml"
 end
 
 group :test do
@@ -55,7 +62,3 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
-
-gem "sassc-rails"
-
-gem "faker"
